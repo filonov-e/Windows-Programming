@@ -51,8 +51,6 @@ namespace Example_18
             countryAbbrGeneric.Add("CA", "Canada");
             Console.WriteLine("Country with abbreviation NL in sorted list: " + countryAbbr["NL"]);
             Console.WriteLine("Third value in the sorted list: " + countryAbbr.GetByIndex(2));
-
-
         }
     }
 }

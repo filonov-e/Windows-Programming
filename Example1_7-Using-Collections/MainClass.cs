@@ -3,22 +3,15 @@ using System.Collections;
 
 namespace Example_17
 {
-
-
-
     class Customer
     {
-
         //These are data members
-
         string name;
         int id;
-
 
         public const string firm = "ITC Tech";
 
         //This is the constructor
-
         public Customer()
         {
             this.name = "customer not known";
@@ -37,7 +30,6 @@ namespace Example_17
             this.id = id;
         }
 
-
         public Customer(string name, int id)
         {
 
@@ -48,7 +40,6 @@ namespace Example_17
         }
 
         //This is a static function member
-
         public static string GetFirmName()
         {
 
@@ -57,7 +48,6 @@ namespace Example_17
         }
 
         //This is an ordinary function
-
         public bool CustomerFound(int id)
         {
 
@@ -66,7 +56,6 @@ namespace Example_17
         }
 
         //This is the overloaded version of CustomerFound()
-
         public bool CustomerFound(string name)
         {
 
@@ -74,31 +63,21 @@ namespace Example_17
 
         }
 
-
         public string CustomerInfo()
         {
 
             return name + " " + id;
 
         }
-
     }
-
-
 
     class MainClass
     {
-
         static void Main(string[] args)
         {
-
-
             //Here we call the static function
-
             Console.WriteLine("Firm name: " + Customer.GetFirmName());
             Console.WriteLine("------------------------");
-
-
 
             //In the following we declare an arry list for keeping Customer
             //bjects and initialize it.
@@ -108,9 +87,6 @@ namespace Example_17
             customers.Add(new Customer("Charlotta"));
             customers.Add(new Customer("Victor", 200));
             customers.Add(new Customer("Valentine", 300));
-
-
-
 
             Console.Write("Type customer id: ");
             int id = Int16.Parse(Console.ReadLine());
@@ -134,10 +110,8 @@ namespace Example_17
             if (!customerFound)
                 Console.WriteLine("Customer with id " + id + " was not found!");
 
-
             Console.Write("Type customer name: ");
             string name = Console.ReadLine();
-
 
             //In the following we check whether customer with given name is found
             //from the list of customers.
@@ -156,9 +130,6 @@ namespace Example_17
                 Console.WriteLine("Customer with name " + name + " was not found! ");
 
             return;
-
         }
-
     }
-
 }

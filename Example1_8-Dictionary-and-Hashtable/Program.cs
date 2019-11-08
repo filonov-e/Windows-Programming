@@ -7,7 +7,6 @@ namespace HashtableDictionary
     {
         static void Main(string[] args)
         {
-
             Hashtable codes = new Hashtable();
             codes.Add(1, "Canada");
             codes.Add(49, "Germany");

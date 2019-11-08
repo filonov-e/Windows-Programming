@@ -30,8 +30,7 @@ namespace Example_14
             double x;
             int j;
             string text;
-          
-           
+
             //We can pass variable x without initialization becaus of out keyword
             SetValue(out x, out j, out text);
             Console.WriteLine("x, j, text after calling SetValue():");
