@@ -17,3 +17,8 @@
     `csc <FILE NAME>.cs`
     <br>or<br>
     `csc *.cs`
+
+### Linux and Mac
+
+Follow the guide on this webpage:<br>
+https://kozmicluis.com/compile-c-sharp-command-line/
