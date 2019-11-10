@@ -1,0 +1,9 @@
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe.config
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\bin\Debug\Assignment1.pdb
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\bin\Debug\MathNet.Numerics.dll
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\bin\Debug\MathNet.Numerics.xml
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csprojAssemblyReference.cache
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csproj.CopyComplete
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.exe
+C:\Users\cliff\Documents\Work\Studies\Windows-Programming\Assignments\Assignment1\Assignment1\obj\Debug\Assignment1.pdb
