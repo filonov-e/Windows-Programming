@@ -11,7 +11,7 @@ namespace Assignment1
         
         static void AddCustomerDialog(ref List<Customer> customers)
         {
-            Console.WriteLine("Enter name:");
+            Console.WriteLine("\nEnter name:");
             string name = Console.ReadLine();
 
             string id;
@@ -42,6 +42,8 @@ namespace Assignment1
         static void AddFlightDialog(ref List<Flight> flights)
         {
             string id;
+
+            Console.WriteLine("\n");
 
             while (true)
             {
@@ -74,7 +76,7 @@ namespace Assignment1
 
         static void FindFlightDialog(List<Customer> customers, List<Flight> flights)
         {
-            Console.WriteLine("Enter flight id:");
+            Console.WriteLine("\nEnter flight id:");
             string id = Console.ReadLine();
             Flight myFlight = flights.Find(flight => flight.Id.Equals(id));
 
@@ -92,7 +94,7 @@ namespace Assignment1
 
         static void FindCustomerDialog(List<Customer> customers, List<Flight> flights)
         {
-            Console.WriteLine("Enter customer id:");
+            Console.WriteLine("\nEnter customer id:");
             string id = Console.ReadLine();
             Customer myCustomer = customers.Find(customer => customer.Id.Equals(id));
 

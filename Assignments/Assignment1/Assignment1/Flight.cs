@@ -8,10 +8,10 @@ namespace Assignment1
 {
     class Flight
     {
-        public string Id { get; set; }
-        public string Origin { get; set; }
-        public string Destination { get; set; }
-        public string Date { get; set; }
+        public string Id { get; private set; }
+        public string Origin { get; private set; }
+        public string Destination { get; private set; }
+        public string Date { get; private set; }
 
         public Flight (string Id, string Origin, string Destination, string Date)
         {
@@ -26,7 +26,7 @@ namespace Assignment1
             Console.WriteLine("Id: {0}", Id);
             Console.WriteLine("Origin: {0}", Origin);
             Console.WriteLine("Destination: {0}", Destination);
-            Console.WriteLine("Date: {0}", Date);
+            Console.WriteLine("Date: {0}\n", Date);
         }
     }
 }
