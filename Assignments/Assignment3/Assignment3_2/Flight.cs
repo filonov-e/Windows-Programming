@@ -32,11 +32,11 @@ namespace Assignment3_2
             return sb.ToString();
         }
 
-        public string MethodForDelegate(Func<Flight, string> myFunction, double Price)
+        public string MethodForDelegate(FlightDelegate flightDelegate, double Price)
         {
             if (Price < this.Price)
             {
-                return myFunction(this);
+                return flightDelegate(this);
             }
 
             return "Price is higher than flight's price";

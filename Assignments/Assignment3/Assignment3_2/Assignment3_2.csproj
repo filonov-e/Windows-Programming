@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AirlineCompany.cs" />
     <Compile Include="Flight.cs" />
+    <Compile Include="FlightActions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
