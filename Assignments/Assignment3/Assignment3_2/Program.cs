@@ -21,13 +21,17 @@ namespace Assignment3_2
             Console.WriteLine(company.FindFlight("3"));
 
             FlightDelegate fd1 = new FlightDelegate(FlightActions.GetInfo);
+            FlightDelegate fd2 = new FlightDelegate(FlightActions.GetFullInfo);
 
             string info1FromDelegate = company[0].MethodForDelegate(fd1, 5.99);
-            string info2FromDelegate = company[0].MethodForDelegate(fd1, 12.99);
+            string info2FromDelegate = company[0].MethodForDelegate(fd2, 6.99);
+            string info3FromDelegate = company[0].MethodForDelegate(fd1, 12.99);
             Console.WriteLine("Info 1");
             Console.WriteLine(info1FromDelegate);
             Console.WriteLine("Info 2");
             Console.WriteLine(info2FromDelegate);
+            Console.WriteLine("Info 3");
+            Console.WriteLine(info3FromDelegate);
         }
     }
 }

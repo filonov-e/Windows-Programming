@@ -19,5 +19,10 @@ namespace Assignment3_2
 
             return sb.ToString();
         }
+
+        public static string GetFullInfo(Flight myFlight)
+        {
+            return myFlight.GetFlightInfo();
+        }
     }
 }
