@@ -14,7 +14,7 @@ namespace Assignment4
         public string PhoneNumber { get; private set; }
         public List<Ticket> Tickets = new List<Ticket>();
 
-        public Ticket this[int index]
+        virtual public Ticket this[int index]
         {
             set
             {
