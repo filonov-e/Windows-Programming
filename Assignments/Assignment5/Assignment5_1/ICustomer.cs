@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment5_5
+namespace Assignment5_2
 {
     interface ICustomer
     {

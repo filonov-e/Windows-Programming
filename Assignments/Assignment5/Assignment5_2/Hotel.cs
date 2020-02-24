@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
-namespace Assignment5_5
+namespace Assignment5_3
 {
-    class Hotel : IHotel
+    [XmlRoot("hotel")]
+    public class Hotel : IHotel
     {
-        public string Name { get; private set; }
-        public string ConstructionDate { get; private set; }
-        public string Address { get; private set; }
-        public int NumberOfStars { get; private set; }
-        public List<Room> Rooms { get; private set; } = new List<Room>();
-        public List<Customer> Customers { get; private set; } = new List<Customer>();
+        [XmlElement("name")]
+        public string Name { get; set; }
+        [XmlElement("constructionDate")]
+        public string ConstructionDate { get; set; }
+        [XmlElement("address")]
+        public string Address { get; set; }
+        [XmlElement("numberOfStars")]
+        public int NumberOfStars { get; set; }
+        [XmlElement("rooms")]
+        public List<Room> Rooms { get; set; } = new List<Room>();
+        [XmlElement("customers")]
+        public List<Customer> Customers { get; set; } = new List<Customer>();
+
+        public Hotel() { }
 
         public Hotel(string name, string constructionDate, string address, int numberOfStars)
         {
@@ -67,6 +79,34 @@ namespace Assignment5_5
             sb.AppendLine("}");
             
             return sb.ToString();
+        }
+
+        public static string WriteXML<T>(T type, string filePathName)
+        {
+            if (type == null)
+                return "Invalid data type!";
+            XmlSerializer serializer = new XmlSerializer(type.GetType());
+            XmlWriter xmlWriter = XmlWriter.Create(
+                filePathName,
+                new XmlWriterSettings()
+                {
+                    OmitXmlDeclaration = true,
+                    ConformanceLevel = ConformanceLevel.Auto,
+                    Indent = true
+                }
+            );
+            serializer.Serialize(xmlWriter, type);
+            xmlWriter.Close();
+            return "File length: " + new FileInfo(filePathName).Length;
+        }
+
+        public static T ReadXML<T>(string FileName)
+        {
+            using (var stream = System.IO.File.OpenRead(FileName))
+            {
+                var serializer = new XmlSerializer(typeof(T));
+                return (T)serializer.Deserialize(stream);
+            }
         }
     }
 }

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment5_5
+namespace Assignment5_2
 {
+    [Serializable]
     class Hotel : IHotel
     {
         public string Name { get; private set; }

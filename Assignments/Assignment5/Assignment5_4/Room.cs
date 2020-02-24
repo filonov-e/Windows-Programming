@@ -1,18 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
-namespace Assignment5_5
+namespace Assignment5_4
 {
-    class Room : IRoom
+    [DataContract]
+    public class Room : IRoom
     {
-        public string RoomNumber { get; private set; }
-        public double Area { get; private set; }
-        public RoomType Type { get; private set; }
-        public double PricePerNight { get; private set; }
-        public string Description { get; private set; }
+        [DataMember]
+        public string RoomNumber { get; set; }
+        [DataMember]
+        public double Area { get; set; }
+        [DataMember]
+        public RoomType Type { get; set; }
+        [DataMember]
+        public double PricePerNight { get; set; }
+        [DataMember]
+        public string Description { get; set; }
+
+        public Room() { }
 
         public Room(
             string roomNumber,

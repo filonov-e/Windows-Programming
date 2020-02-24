@@ -1,19 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
-namespace Assignment5_5
+namespace Assignment5_4
 {
-    class Hotel : IHotel
+    [DataContract]
+    public class Hotel : IHotel
     {
-        public string Name { get; private set; }
-        public string ConstructionDate { get; private set; }
-        public string Address { get; private set; }
-        public int NumberOfStars { get; private set; }
-        public List<Room> Rooms { get; private set; } = new List<Room>();
-        public List<Customer> Customers { get; private set; } = new List<Customer>();
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string ConstructionDate { get; set; }
+        [DataMember]
+        public string Address { get; set; }
+        [DataMember]
+        public int NumberOfStars { get; set; }
+        [DataMember]
+        public List<Room> Rooms { get; set; } = new List<Room>();
+        [DataMember]
+        public List<Customer> Customers { get; set; } = new List<Customer>();
+
+        public Hotel() { }
 
         public Hotel(string name, string constructionDate, string address, int numberOfStars)
         {

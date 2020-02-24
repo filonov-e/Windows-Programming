@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BF146E3-1DDF-4D19-BF90-6B983BE3C923}</ProjectGuid>
+    <ProjectGuid>{DD8CFCB0-648C-45E9-89D4-E79570B43B96}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignment5</RootNamespace>
-    <AssemblyName>Assignment5</AssemblyName>
+    <RootNamespace>Assignment5_2</RootNamespace>
+    <AssemblyName>Assignment5_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="ICustomer.cs" />
+    <Compile Include="IHotel.cs" />
     <Compile Include="IRoom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
