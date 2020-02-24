@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Assignment5
 {
+    public enum RoomType
+    {
+        Single,
+        Double,
+        Studio
+    }
+
     interface IRoom
     {
         string RoomNumber { get; }
         double Area { get; }
-        string Type { get; }
+        RoomType Type { get; }
         double PricePerNight { get; }
         string Description { get; }
     }

@@ -10,14 +10,14 @@ namespace Assignment5
     {
         public string RoomNumber { get; private set; }
         public double Area { get; private set; }
-        public string Type { get; private set; }
+        public RoomType Type { get; private set; }
         public double PricePerNight { get; private set; }
         public string Description { get; private set; }
 
         public Room(
             string roomNumber,
             double area,
-            string type,
+            RoomType type,
             double pricePerNight,
             string description
         ) {
@@ -26,6 +26,18 @@ namespace Assignment5
             this.Type = type;
             this.PricePerNight = pricePerNight;
             this.Description = description;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Room number: " + this.RoomNumber);
+            sb.AppendLine("Area: " + this.Area.ToString());
+            sb.AppendLine("Type: " + this.Type.ToString());
+            sb.AppendLine("Price per night: " + this.PricePerNight.ToString());
+            sb.AppendLine("Description: " + this.Description);
+
+            return sb.ToString();
         }
     }
 }
